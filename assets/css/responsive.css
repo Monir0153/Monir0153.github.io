@@ -1,0 +1,60 @@
+/*******************************
+	All Responsive Code
+*******************************/
+@media only screen and (min-width: 768px) and (max-width:768px){
+	header .container{
+		min-width: 768px;
+	}
+}
+
+@media only screen and (max-width: 767.98px){
+	header{
+		position: relative;
+	}
+	header,
+	header .container{
+		padding: 0;
+	}
+
+	.factory-text{
+		width: 100%;
+		border: 0;
+		padding: 0;
+	}
+	.factory-text h2{
+		position: absolute;
+		z-index: 1000000;
+		left: 5%;
+		transform: translateY(10px);
+	}
+	.factory-text a{
+		color: var(--white);
+	}
+	#navbar{
+		position: fixed;
+		z-index: 100000000;
+	}
+	/* header section */
+	.header-section .content{
+		top: 20%;
+	}
+	/* About section */
+	.about-section img{
+		width: 95%;
+	}
+	.about-section .right-content{
+		margin-top: 30px;
+	}
+	/* Portfolio section */
+	.project-item{
+		margin: 10px;
+	}
+	/* Contact section */
+	.contact-info{
+		margin-bottom: 15px;
+	}
+	.contact-section form{
+		margin-top: 1em;
+	}
+	
+}

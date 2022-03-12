@@ -1,0 +1,465 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    Project Name
+Version:    1.0
+Last change:24/03/17 [fixed Float bug, vf]
+Author Name:Tawhidul Alam
+Primary use:
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+1. Body
+2. Header-top
+2. Navbar
+-------------------------------------------------------------------*/
+/*
+==========================================
+    Reset Css
+==========================================
+*/
+:root {
+    --primary: #0694d6;
+    --dark: #0b0b0b;
+    --body: #000;
+    --box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+    --white: #f5f3f3;
+    --Lato: 'Lato', sans-serif;
+    --Nunito: 'Nunito', sans-serif;
+    --Source: 'Source Sans Pro', sans-serif;
+}
+
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--body);
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.display-4,
+ul {
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+}
+a,
+a:hover{
+    text-decoration: none;
+}
+.underline::after{
+    content: "";
+    width: 50px;
+    height: 3px;
+    display: block;
+    margin: 10px auto;
+    background-color: var(--primary);
+}
+/* ------------------------------------------------
+    ***Header Top  Css Start***
+------------------------------------------------- */
+/* header & menubar */
+header{
+    background: transparent;
+    position: absolute;
+    padding: 20px 0;
+    width: 100%;
+    z-index: 2;
+}
+header .is-sticky .sticky-area {
+    background: #0c1923;
+	box-shadow: 0 3px 16px -2px #4c4a4ade;
+    z-index: 999 !important;
+    -webkit-animation: slideInDown .6s forwards;
+    animation: slideInDown .6s forwards;
+    margin-top: 0;
+}
+header .is-sticky .sticky-area .factory-text a{
+	color:var(--white);
+}
+header .is-sticky .sticky-area .factory-text{
+    padding-top: 15px;
+}
+.factory-text h2{
+    font-family: var(--Source);
+    font-weight: 700;
+    
+}
+.factory-text h2 a{
+    color: var(--white);
+}
+.factory-text h2 a span{
+    color: var(--primary);
+}
+/* Menu */
+@media only screen and (min-width:768px){
+    .main-menu li{
+        display: inline-block;
+    }
+    header .is-sticky .sticky-area .main-menu li a{
+        color: var(--white);
+    }
+    .main-menu li a{
+        color: var(--white);
+        font-family: var(--Nunito);
+        font-size: 16px;
+        display: block;
+        font-weight: 600;
+        letter-spacing: 1px;
+        padding-left: 30px;
+        transition: .3s;
+    }
+    .main-menu li a::after{
+        content: "";
+        height: 3px;
+        background-color: var(--primary);
+        width: 0%;
+        display: block;
+        margin: auto;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+    }
+    
+    .main-menu li a:hover::after{
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+/* ========header section============ */
+.header-section{
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    object-fit:contain;
+    object-position: center;
+}
+.header-section .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 40%;
+}
+.header-section .content h2,
+.header-section .content h1,
+.header-section .content p,
+.header-section .content a{
+    color: var(--white);
+    text-align: center;
+}
+.header-section .content h2,
+.header-section .content h1{
+    font-family: var(--Source);
+    font-weight: 700;
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.header-section .content h1 span{
+    color: var(--primary);
+}
+.header-section .content a{
+    font-family: var(--Nunito);
+    border: 2px solid var(--primary);
+    background: var(--primary);
+    font-weight: bold;
+    padding: 8px 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: all .4s ease;
+    margin-top: 15px;
+}
+.header-section .content a:hover{
+    color: var(--white);
+    background: transparent;
+
+}
+/* About Section */
+.about-section{
+    padding: 70px 0;
+}
+.about-section img{
+    width: 350px;
+    margin: 0 auto;
+    display: block;
+}
+.about-section .right-content h3{
+    color: var(--primary);
+}
+.about-section .right-content h3,
+.about-section .right-content h1{
+    font-weight: bold;
+}
+.about-section .right-content h1::after{
+    content: "";
+    width: 50px;
+    height: 3px;
+    margin-top: 5px;
+    margin-left: 10px;
+    display: block;
+    background-color: var(--primary);
+}
+.about-section .right-content{
+    padding: 0 20px;
+}
+.about-section .right-content p{
+    margin-top: 10px;
+    font-weight: 600;
+}
+.about-section .right-content .progress-title{
+    display: flex;
+    justify-content: space-between;
+}
+.about-section .progress{
+    height: 13px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+.about-section .progress-bar{
+    background-color: var(--primary);
+    width: 0%;
+    border-radius: 0 3px 3px 0;
+    position: relative;
+}
+.progress-bar::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--primary);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: -2px;
+    top: -1px;
+    
+}
+.about-section label{
+    font-size: 16px;
+    margin: 10px;
+}
+/* Service section */
+.service-section {
+    background-color: var(--white);
+    padding: 80px 0;
+}
+.service-section .service-heading h4,
+.service-section .service-heading h1{
+    text-align: center;
+    font-weight: bold;
+}
+.service-section .service-heading h1{
+    margin-top: 10px;
+}
+.service-section .service-item{
+    margin: 15px 3px;
+    padding: 50px 15px;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+.service-section .service-item .icon{
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+    margin: 0 auto 30px;
+    transition: all .4s ease;
+    position: relative;
+}
+.service-section .service-item .icon i{
+    color: var(--white);
+    font-size: 45px;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.service-section .service-item h3{
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+.service-section .service-item p{
+    text-align: center;
+}
+.service-section .service-item:hover,
+.service-section .service-item .icon i{
+    background-color: var(--primary);
+    
+}
+.service-section .service-item:hover .icon{
+    background-color: #fff;
+}
+.service-section .service-item:hover h3{
+    color: #fff;
+}
+.service-section .service-item:hover p{
+    color: #fff;
+}
+/* ===== Portfolio section======= */
+.portfolio-section {
+    padding: 80px 0;
+}
+.portfolio-section .project-title h5,h1{
+    font-weight: bold;
+}
+.portfolio-section .project-title h1{
+    margin: 15px 0;
+}
+.portfolio-section .project-title ul li{
+    display: inline-block;
+    margin: 15px 15px 30px 0;
+    padding: 3px 10px;
+    border: 1px solid var(--primary);
+    border-radius: 3px;
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: bold;
+    transition: all .3s ease;
+}
+.portfolio-section .project-title ul li:hover,
+.portfolio-section .project-title li.active{
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.project-bg-1{background-image: url(../img/ecom-1.jpeg);border-radius: 10px;}
+.project-bg-2{background-image: url(../img/food-1.jpg);border-radius: 10px;}
+.project-bg-3{background-image: url(../img/edu-1.jpeg);border-radius: 10px;}
+.project-bg-4{background-image: url(../img/ecom-2.jpeg);border-radius: 10px;}
+.project-bg-5{background-image: url(../img/food-2.jpg);border-radius: 10px;}
+.project-bg-6{background-image: url(../img/edu-2.jpeg);border-radius: 10px;}
+.project-bg-7{background-image: url(../img/ecom-3.jpeg);border-radius: 10px;}
+.project-bg-8{background-image: url(../img/food3.jpg);border-radius: 10px;}
+.project-bg-9{background-image: url(../img/edu-3.jpeg);border-radius: 10px;}
+
+.project-item{
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 25px;
+}
+/* Contact-section */
+.contact-section{
+    padding: 80px 0;
+    background-color: var(--white);
+}
+.contact-section .contact-title h5,h2{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.contact-section .contact-info{
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    padding: 50px;
+}
+.contact-section .contact-info h5{
+    margin-bottom: 20px;
+}
+.contact-section .contact-info h5 i{
+    color: var(--primary);
+}
+.contact-section form{
+    margin-top: 5em;
+}
+.contact-section form input,textarea{
+    display: block;
+    width: 100%;
+    margin-bottom: 22px;
+    padding: 5px 15px 5px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.contact-section button{
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    color: var(--white);
+    padding: 10px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+}
+.contact-section button:hover{
+    letter-spacing: 5px;
+}
+/* footer */
+footer{
+    width: 100%;
+    padding: 20px;
+    background-color: var(--primary);
+}
+footer h5{
+    color: var(--white);
+}
+
+/* bottom to top */
+.scroll-top {
+    position: fixed;
+    right: 5%;
+    bottom: 15px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    background: var(--primary);
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    box-shadow: none;
+    z-index: 999999999;
+    color: #fff;
+    display: none;
+    transition: all .3s ease;
+}
+.scroll-top i{
+    font-size: 20px;
+}
+.scroll-top:hover,
+.scroll-top:focus {
+    background: var(--dark);
+    border: 3px solid var(--primary);
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.6);
+}
+/* Preloader */
+#preloader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background-color: #ffffff;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url("../img/preloader.gif");
+}
