@@ -281,7 +281,7 @@ header .is-sticky .sticky-area .factory-text{
     background: #fff;
     box-shadow: var(--box-shadow);
     border-radius: 20px;
-    transition: all .3s ease;
+    transition: all .4s ease;
 }
 .service-section .service-item .icon{
     width: 60px;
@@ -290,7 +290,6 @@ header .is-sticky .sticky-area .factory-text{
     border-radius: 20px;
     border-bottom-right-radius: 0;
     margin: 0 auto 30px;
-    transition: all .4s ease;
     position: relative;
 }
 .service-section .service-item .icon i{
@@ -309,13 +308,14 @@ header .is-sticky .sticky-area .factory-text{
 .service-section .service-item p{
     text-align: center;
 }
-.service-section .service-item:hover,
-.service-section .service-item .icon i{
+.service-section .service-item:hover{
     background-color: var(--primary);
     
 }
-.service-section .service-item:hover .icon{
-    background-color: #fff;
+.service-section .service-item:hover .icon,
+.service-section .service-item:hover .icon i{
+    background-color: var(--white);
+    color: var(--primary);
 }
 .service-section .service-item:hover h3{
     color: #fff;
@@ -398,6 +398,9 @@ header .is-sticky .sticky-area .factory-text{
     border: 1px solid var(--primary);
     border-radius: 5px;
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.contact-section textarea{
+    height: 156px;
 }
 .contact-section button{
     width: 100%;
