@@ -1,0 +1,97 @@
+/*******************************
+	All Responsive Code
+*******************************/
+@media only screen and (min-width:768px) and (max-width: 768px) {
+	header .container {
+		min-width: 768px;
+	}
+}
+
+@media only screen and (max-width: 767.98px) {
+	header {
+		position: relative;
+	}
+	header,
+	header .container {
+		padding: 0;
+	}
+
+	.factory-text {
+		width: 100%;
+		border: 0;
+		padding: 0;
+	}
+
+	.factory-text h2 {
+		position: absolute;
+		z-index: 1000000;
+		left: 5%;
+		transform: translateY(10px);
+	}
+
+	.factory-text a {
+		color: var(--white);
+	}
+	#navbar{
+		position: fixed;
+		z-index: 100000000;
+	}
+	/* slider area */
+	.single-slide-item .content{
+		top: 100px;
+	}
+	/* info item */
+	.info-section .info-item{
+		margin-bottom: 10px;
+	}
+	/* details section */
+	.details-images{
+		margin-top: 30px;
+	}
+	/* Description section */
+	
+	/* client item */
+	.client-item{
+		margin-bottom: 30px;
+	}
+	/* sponsor item */
+	/* handcraft */
+	.handcraft{
+		height: 100vh;
+	}
+	/* Entry item */
+	.entry-section .entry-content input[type=email]{
+		margin-left: 0;
+	}
+	.entry-section .entry-content input[name=Cname],input[type=email]{
+		width: 100%;
+	}
+	/* footer item */
+	.footer-menu{
+		display: none;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.footer-section .footer-item {
+		margin-top: 0;
+	}
+	.footer-section .footer-item p{
+		width: 100%;
+	}
+	.footer-item:last-child h6,.footer-item form{
+		text-align: start;
+	}
+	.footer-item input{
+		width: 50%;
+		border: none;
+	}
+	.footer-section .social-link p{
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 370px){
+	.info-section{
+		margin-top: -5px;
+	}
+}
+

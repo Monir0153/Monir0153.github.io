@@ -359,12 +359,14 @@ header .is-sticky .sticky-area .factory-text{
 .project-bg-7{background-image: url(../img/ecom-3.jpeg);border-radius: 10px;}
 .project-bg-8{background-image: url(../img/food3.jpg);border-radius: 10px;}
 .project-bg-9{background-image: url(../img/edu-3.jpeg);border-radius: 10px;}
+.project-bg-10{background-image: url(../img/buis-1.png);border-radius: 10px;}
 
 .project-item{
     height: 300px;
     background-size: cover;
     background-position: center;
     margin-bottom: 25px;
+    cursor: pointer;
 }
 /* Contact-section */
 .contact-section{
