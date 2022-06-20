@@ -535,10 +535,10 @@ header .is-sticky .sticky-area .factory-text a{
     width: 100%;
 }
 .entry-section .entry-content input[name=Cname],input[type=email]{
-    width: 49%;
+    width: 48%;
 }
 .entry-section .entry-content input[type=email]{
- margin-left: 3.5% ;
+ margin-left: 3.5%;
 }
 .entry-section .entry-content a,.entry-section button{
     background: var(--primary);
