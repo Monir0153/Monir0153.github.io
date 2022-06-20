@@ -66,6 +66,9 @@
 	.entry-section .entry-content input[name=Cname],input[type=email]{
 		width: 100%;
 	}
+	.entry-section .entry-content input[type=email]{
+		margin-left: 3.5%;
+	}
 	/* footer item */
 	.footer-menu{
 		display: none;
